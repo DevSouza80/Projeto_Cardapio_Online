@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <!--link css-->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/resete.css" />
+    <!---->
+    <title>Brasa Burger - O verdadeiro sabor da brasa brasileira. </title>
+</head>
+
+<body>
+    <div id="project-body">
+        <!--section session-hero-->
+        <section style="background-image:url('./assets/img/imagem-top.png');" class="session-hero">
+            <div class="container-page">
+                <div class="center-wrapper">
+                    <div class="logo-brands">
+                        <div class="img-logo">
+                            <img src="./assets/img/img-logo.png" alt="img-logo" />
+                        </div>
+                        <div class="title-logo">
+                            <h2>Brasa Burger</h2>
+                            <p><i class="bi bi-geo-alt"></i> Rua Nova Estação, 12 - Campo grande, MS</p>
+                        </div>
+                        <div class="group-hours" id="date-span">
+                            <p><i class="bi bi-clock-history"></i> Seg á Dom - 18:00 ás 22:00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!---->
+        <!--section session-products-->
+        <section class="session-products" id="menu-dimension">
+            <div class="container-page">
+                <div class="modal-interface" id="cart-modal">
+                    <div class="title-modal">
+                        <h2>Meu carrinho</h2>
+                    </div>
+                    <div class="cart-itens" id="cart-itens"></div>
+                    <div class="price-total">
+                        <p>Total: <span id="cart-total">0.00</span></p>
+                    </div>
+                    <div class="input-location">
+                        <label for="input">Endereço de entrega</label>
+                        <input type="text" id="input-location" placeholder="Digite seu endereço completo">
+                        <p style="color:#eb2d2d" id="address-warn">Digite seu endereço completo</p>
+                    </div>
+                    <div class="flex-modal">
+                        <div class="btn-close">
+                            <button id="close-modal-btn">Fechar</button>
+                        </div>
+                        <div class="btn-finish">
+                            <a href="#">
+                                <button id="checkout-btn"> Finalizar Pedido</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="title-products">
+                    <h3>CARDÁPIO</h3>
+                    <h2>Conheça nosso menu</h2>
+                </div>
+                <div class="grid-products">
+                    <div class="item-product">
+                        <div style="background-image:url('./assets/img/img-product1.png');" class="image-product"></div>
+                        <div class="content-product">
+                            <div class="flex-productTitle">
+                                <div class="title-product">
+                                    <h2>Cheese Burguer Duplo</h2>
+                                </div>
+                                <div class="price-product">
+                                    <p>R$35,00</h3>
+                                </div>
+                            </div>
+                            <div class="text-product">
+                                <p>Pão brioche, dois burgers 160g, queijo cheddar duplo e maionese da casa.</p>
+                            </div>
+                            <div class="btn-product">
+                                <a class="btn-cart" href="#">
+                                    <button  class="add-to-cart-btn" data-name="Cheese Burguer Duplo" data-price="35.00" > <i class="bi bi-cart4"></i> Adicionar</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-product">
+                        <div style="background-image:url('./assets/img/img-product2.png');" class="image-product"></div>
+                        <div class="content-product">
+                            <div class="flex-productTitle">
+                                <div class="title-product">
+                                    <h2>Cheese Burger</h2>
+                                </div>
+                                <div class="price-product">
+                                    <p>R$25,00</h3>
+                                </div>
+                            </div>
+                            <div class="text-product">
+                                <p>Brioche artesanal, blend duplo de 160g, cheddar cremoso em dobro e maionese especial
+                                    da casa.</p>
+                            </div>
+                            <div class="btn-product">
+                                <a class="btn-cart" href="#">
+                                    <button data-name="Cheese Burger" data-price="25.00" class="add-to-cart-btn"> <i class="bi bi-cart4"></i> Adicionar</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-product">
+                        <div style="background-image:url('./assets/img/img-product3.png');" class="image-product"></div>
+                        <div class="content-product">
+                            <div class="flex-productTitle">
+                                <div class="title-product">
+                                    <h2>Combo Smash Burger</h2>
+                                </div>
+                                <div class="price-product">
+                                    <p>R$38,00</h3>
+                                </div>
+                            </div>
+                            <div class="text-product">
+                                <p>Smash burgers 160g, cheddar duplo derretido, maionese da casa, pão brioche e batata
+                                    frita.</p>
+                            </div>
+                            <div class="btn-product">
+                                <a class="btn-cart" href="#">
+                                    <button data-name="Combo Smash Burger" data-price="38.00" class="add-to-cart-btn"> <i class="bi bi-cart4"></i> Adicionar</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-product">
+                        <div style="background-image:url('./assets/img/img-product4.png');" class="image-product"></div>
+                        <div class="content-product">
+                            <div class="flex-productTitle">
+                                <div class="title-product">
+                                    <h2>Pizza Mista</h2>
+                                </div>
+                                <div class="price-product">
+                                    <p>R$65,00</h3>
+                                </div>
+                            </div>
+                            <div class="text-product">
+                                <p>Metade calabresa com cebola, metade frango com catupiry. Molho de tomate e mussarela.
+                                </p>
+                            </div>
+                            <div class="btn-product">
+                                <a class="btn-cart" href="#">
+                                    <button data-name="Pizza Mista" data-price="65.00" class="add-to-cart-btn"> <i class="bi bi-cart4"></i> Adicionar</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-product">
+                        <div style="background-image:url('./assets/img/img-product5.png');" class="image-product"></div>
+                        <div class="content-product">
+                            <div class="flex-productTitle">
+                                <div class="title-product">
+                                    <h2>X-Tudo</h2>
+                                </div>
+                                <div class="price-product">
+                                    <p>R$28,00</h3>
+                                </div>
+                            </div>
+                            <div class="text-product">
+                                <p>Pão de hambúrguer, burger 160g, queijo, presunto, bacon, ovo, alface, tomate e
+                                    maionese.</p>
+                            </div>
+                            <div class="btn-product">
+                                <a class="btn-cart" href="#">
+                                    <button data-name="X-Tudo" data-price="28.00" class="add-to-cart-btn"> <i class="bi bi-cart4"></i> Adicionar</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-product">
+                        <div style="background-image:url('./assets/img/img-product6.png');" class="image-product"></div>
+                        <div class="content-product">
+                            <div class="flex-productTitle">
+                                <div class="title-product">
+                                    <h2>Crispy Burger</h2>
+                                </div>
+                                <div class="price-product">
+                                    <p>R$23,00</h3>
+                                </div>
+                            </div>
+                            <div class="text-product">
+                                <p>Pão brioche, frango empanado crocante, queijo cheddar, alface, tomate e maionese da
+                                    casa.</p>
+                            </div>
+                            <div class="btn-product">
+                                <a class="btn-cart" href="#">
+                                    <button data-name="Crispy Burger" data-price="23.00" class="add-to-cart-btn"> <i class="bi bi-cart4"></i> Adicionar</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="drinks-session">
+                    <div class="title-drinks">
+                        <h2>Bebidas</h2>
+                    </div>
+                    <div class="grid-drinks">
+
+                        <div class="drink-card">
+                            <div style="background-image:url('./assets/img/guarana.png');" class="image-drink"></div>
+                            <div class="content-drink">
+                                <div class="flex-drinks">
+                                    <div class="title-card">
+                                        <h2>Guaraná Antarctica 2L</h2>
+                                    </div>
+                                    <div class="price-drinks">
+                                        <p> R$8,00</p>
+                                    </div>
+                                </div>
+                                <div class="text-drink">
+                                    <p>Refrigerante de guaraná 2L</p>
+                                </div>
+                                <div class="btn-drink">
+                                    <a class="btn-cart" href="#">
+                                        <button data-name="Guaraná Antarctica 2L" data-price="8.00" class="add-to-cart-btn"> <i class="bi bi-cart4"></i> Adicionar</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="drink-card">
+                            <div style="background-image:url('./assets/img/coca1litrro.jpeg');" class="image-drink">
+                            </div>
+                            <div class="content-drink">
+                                <div class="flex-drinks">
+                                    <div class="title-card">
+                                        <h2>Coca Cola 2L</h2>
+                                    </div>
+                                    <div class="price-drinks">
+                                        <p> R$10,00</p>
+                                    </div>
+                                </div>
+                                <div class="text-drink">
+                                    <p>Refrigerante coca cola 2L</p>
+                                </div>
+                                <div class="btn-drink">
+                                    <a class="btn-cart" href="#">
+                                        <button data-name="Coca Cola 2L" data-price="10.00" class="add-to-cart-btn"> <i class="bi bi-cart4"></i> Adicionar</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="drink-card">
+                            <div style="background-image:url('./assets/img/coca_lata.jpeg');" class="image-drink"></div>
+                            <div class="content-drink">
+                                <div class="flex-drinks">
+                                    <div class="title-card">
+                                        <h2>Coca Cola lata</h2>
+                                    </div>
+                                    <div class="price-drinks">
+                                        <p> R$5,50</p>
+                                    </div>
+                                </div>
+                                <div class="text-drink">
+                                    <p>Refrigerante coca lata</p>
+                                </div>
+                                <div class="btn-drink">
+                                    <a class="btn-cart" href="#">
+                                        <button data-name="Coca Cola lata" data-price="5.50" class="add-to-cart-btn"> <i class="bi bi-cart4"></i> Adicionar</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="drink-card">
+                            <div style="background-image:url('./assets/img/kaut.png');" class="image-drink"></div>
+                            <div class="content-drink">
+                                <div class="flex-drinks">
+                                    <div class="title-card">
+                                        <h2>Kuat guaraná 2L</h2>
+                                    </div>
+                                    <div class="price-drinks">
+                                        <p> R$8,00</p>
+                                    </div>
+                                </div>
+                                <div class="text-drink">
+                                    <p>Refrigerante kuat 2L</p>
+                                </div>
+                                <div class="btn-drink">
+                                    <a class="btn-cart" href="#">
+                                        <button data-name="Kuat guaraná 2L" data-price="8.00" class="add-to-cart-btn"> <i class="bi bi-cart4"></i> Adicionar</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="drink-card">
+                            <div style="background-image:url('./assets/img/antartica-lata.png');" class="image-drink">
+                            </div>
+                            <div class="content-drink">
+                                <div class="flex-drinks">
+                                    <div class="title-card">
+                                        <h2>Guaraná Antarctica lata</h2>
+                                    </div>
+                                    <div class="price-drinks">
+                                        <p> R$5,50</p>
+                                    </div>
+                                </div>
+                                <div class="text-drink">
+                                    <p>Refrigerante Antarctica lata</p>
+                                </div>
+                                <div class="btn-drink">
+                                    <a class="btn-cart" href="#">
+                                        <button data-name="Guaraná Antarctica lata" data-price="5.50" class="add-to-cart-btn"> <i class="bi bi-cart4"></i> Adicionar</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="drink-card">
+                            <div style="background-image:url('./assets/img/guaraviton.png');" class="image-drink"></div>
+                            <div class="content-drink">
+                                <div class="flex-drinks">
+                                    <div class="title-card">
+                                        <h2>Guaraviton Açaí 500ml</h2>
+                                    </div>
+                                    <div class="price-drinks">
+                                        <p> R$6,00</p>
+                                    </div>
+                                </div>
+                                <div class="text-drink">
+                                    <p>Bebida mista de Guaraná e Açai </p>
+                                </div>
+                                <div class="btn-drink">
+                                    <a class="btn-cart" href="#">
+                                        <button data-name="Guaraviton Açaí 500ml" data-price="6.00" class="add-to-cart-btn"> <i class="bi bi-cart4"></i> Adicionar</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!---->
+    <!--footer session-cart-->
+    <footer class="session-cart">
+        <div class="container-page">
+            <div class="cart-single">
+                <button id="cart-btn" class="btn-cart">
+
+                    (<span id="cart-count"> 0</span>)
+                    <i class="bi bi-cart4"></i> Carrinho
+                </button>
+            </div>
+        </div>
+    </footer>
+    <!---->
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+    <!--script js-->
+    <script src="./assets/js/function.js"></script>
+    <!---->
+</body>
+
+</html>
